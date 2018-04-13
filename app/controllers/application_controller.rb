@@ -38,6 +38,11 @@ class ApplicationController < Sinatra::Base
 
   post "/login" do
     ##your code here
+    if user.username != nil
+      redirect to "/failure"
+    else
+      redirect to "/login"
+    end
   end
 
   get "/failure" do
