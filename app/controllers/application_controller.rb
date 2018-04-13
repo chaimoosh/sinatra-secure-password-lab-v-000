@@ -41,7 +41,7 @@ class ApplicationController < Sinatra::Base
 
     user = User.find_by(:username => params[:username])
     binding.pry
-    if user == nil 
+    if user == nil
       redirect to "/failure"
     elsif user.username == nil
       redirect to "/failure"
