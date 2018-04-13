@@ -43,9 +43,9 @@ binding.pry
     if user.username != nil
       redirect to "/failure"
     elsif user.authenticate(params[:password])
-      redirect to "/failure"
-    else
       redirect to "/login"
+    else
+      redirect to "/failure"
     end
   end
 
