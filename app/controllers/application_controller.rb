@@ -38,7 +38,7 @@ class ApplicationController < Sinatra::Base
 
   post "/login" do
     ##your code here
-    if user.username != nil  
+    if user.username != nil
       redirect to "/failure"
     elsif user.authenticate(params[:password])
       redirect to "/failure"
